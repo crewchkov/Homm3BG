@@ -53,3 +53,4 @@ jobs:
         with:
           name: main_${{ matrix.language }}
           path: main_${{ matrix.language }}.pdf
+          compression-level: 0
