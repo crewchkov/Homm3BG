@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-18 12:14+0100\n"
+"POT-Creation-Date: 2024-04-19 07:27+0100\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -20,8 +20,8 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:412 sections/combat.tex:5
-#: sections/combat.tex:138 sections/credits.tex:7 sections/deckbuilding.tex:5
+#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/expansion_content.tex:5 sections/expansion_content.tex:49
 #: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
 #: sections/map_elements.tex:34 sections/map_elements.tex:74
@@ -40,7 +40,7 @@ msgstr ""
 #. type: Plain text
 #: sections/all_map_locations.tex:3
 msgid "\\addsection{All Map Locations}{\\skills/earth_magic.png}"
-msgstr ""
+msgstr "\\addsection{Lokacje na Mapie}{\\skills/earth_magic.png}"
 
 #. type: multicols*
 #: sections/all_map_locations.tex:7
@@ -49,9 +49,11 @@ msgid ""
 "\\subsection*{Symbols on the Map}\n"
 "\n"
 msgstr ""
+"\\subsection*{Ikony na Mapie}\n"
+"\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:26
+#: sections/all_map_locations.tex:31
 #, no-wrap
 msgid ""
 "\\begingroup\n"
@@ -59,9 +61,14 @@ msgid ""
 "  \\newcolumntype{Y}{>{\\centering\\arraybackslash}X}\n"
 "  \\begin{tabularx}{\\linewidth}{Y m{0.8\\linewidth}}\n"
 "    \\small\n"
-"    \\mbox{\\textbf{I-VII}} & Field Difficulty corresponding to the level of Neutral Units. \\\\\n"
-"    \\includesvg[height=15px]{\\svgs/treasure.svg} & Roll a Treasure Die and gain the indicated bonus (\\includesvg[height=10px]{\\svgs/resource_die.svg}, \\includesvg[height=10px]{\\svgs/2_treasure_die.svg}, \\includesvg[height=10px]{\\svgs/experience.svg}, or \\includesvg[height=10px]{\\svgs/artifact.svg}).\\index{Treasure Die} \\\\\n"
-"    \\includesvg[height=15px]{\\svgs/resource_die.svg} & Roll a Resource Die and gain the indicated Resources. \\\\\n"
+"    \\mbox{\\textbf{I-VII}} & Field Difficulty corresponding to the level of Neutral Units.\\smallskip \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/treasure.svg} & \\parbox{0.7\\hsize}{\n"
+"        Roll a Treasure Die\\index{Treasure Die}\\index{Dice} and gain the indicated bonus (\\includesvg[height=10px]{\\svgs/resource_die.svg}, \\includesvg[height=10px]{\\svgs/2_treasure_die.svg}, \\includesvg[height=10px]{\\svgs/experience.svg}, or \\includesvg[height=10px]{\\svgs/artifact.svg}).\n"
+"    }\n"
+"    \\begin{tikzpicture}[overlay]\n"
+"      \\node at (1, 0.25) {\\includegraphics[width=0.2\\linewidth]{\\images/treasure_die.png}};\n"
+"    \\end{tikzpicture} \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/resource_die.svg} & Roll a \\hyperlink{Resources}{Resource Die} and gain the indicated Resources. \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/2_treasure_die.svg} & Roll 2 Resource Dice and choose the bonus from one of them. \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/experience.svg} & Gain one Experience Point. \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/artifact.svg} & Search (2) the Artifact Deck. \\\\\n"
@@ -74,10 +81,34 @@ msgid ""
 "\\endgroup\n"
 "\n"
 msgstr ""
+"\\begingroup\n"
+"  \\renewcommand{\\arraystretch}{1.5}\n"
+"  \\newcolumntype{Y}{>{\\centering\\arraybackslash}X}\n"
+"  \\begin{tabularx}{\\linewidth}{Y m{0.8\\linewidth}}\n"
+"    \\small\n"
+"    \\mbox{\\textbf{I-VII}} & Poziom Trudności Pola wskazujący Poziom Jednostek Neutralnych.\\smallskip \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/treasure.svg} & \\parbox{0.7\\hsize}{\n"
+"        Rzuć Kością Skarbów \\index{Treasure Die}\\index{Dice} i zyskaj wskazaną nagrodę (\\includesvg[height=10px]{\\svgs/resource_die.svg}, \\includesvg[height=10px]{\\svgs/2_treasure_die.svg}, \\includesvg[height=10px]{\\svgs/experience.svg}, or \\includesvg[height=10px]{\\svgs/artifact.svg}).\n"
+"    }\n"
+"    \\begin{tikzpicture}[overlay]\n"
+"      \\node at (1, 0.25) {\\includegraphics[width=0.2\\linewidth]{\\images/treasure_die.png}};\n"
+"    \\end{tikzpicture} \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/resource_die.svg} & Rzuć \\hyperlink{Resources}{Kością Zasobów} i zyskaj wskazane Zasoby. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/2_treasure_die.svg} & Rzuć 2 Kośćmi Zasobów i wybierz nagrodę z jednej z nich. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/experience.svg} & Zyskaj jeden PD. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/artifact.svg} & Przeszukaj (2) Talię Artefaktów. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/spellpower.svg} & Przeszukaj (2) Talię Zaklęć. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/morale_positive.svg} & Zyskaj Pozytywne Morale. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/morale_negative.svg} & Zyskaj Negatywne Morale. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/movement.svg} & Zyskaj 1 Punkt Ruchu. \\\\\n"
+"    {\\huge\\textbf{?}} & Efekt specjalny, zob. \\hyperlink{Revisitable Fields}{Jednorazowe} lub \\hyperlink{Other Fields}{Inne} Pola.\\\\\n"
+"  \\end{tabularx}\n"
+"\\endgroup\n"
+"\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:28 sections/all_map_locations.tex:53
-#: sections/all_map_locations.tex:143 sections/expansion_content.tex:103
+#: sections/all_map_locations.tex:33 sections/all_map_locations.tex:58
+#: sections/all_map_locations.tex:148 sections/expansion_content.tex:103
 #: sections/units.tex:127 sections/units.tex:131
 #, no-wrap
 msgid ""
@@ -86,7 +117,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:45
+#: sections/all_map_locations.tex:50
 #, no-wrap
 msgid ""
 "\\begin{itemize}[itemsep=0.4em]\n"
@@ -107,9 +138,26 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\begin{itemize}[itemsep=0.4em]\n"
+"  \\item [{\\LARGE\\textbf{+}}]\n"
+"    \\includesvg[height=0.8\\baselineskip]{\\svgs/gold.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/valuablegreater.svg} —\n"
+"    Natychmiast zyskaj wskazany Zasób.\n"
+"  \\item [{\\includesvg[height=15px]{\\svgs/ongoing.svg}}]\n"
+"    \\includesvg[height=0.8\\baselineskip]{\\svgs/gold.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/valuablegreater.svg} —\n"
+"    Zwiększ produkcję wskazanego Zasobu.\n"
+"    Jeśli Zasób ten zostaje \\textbf{Oflagowany} po raz pierwszy, natychmiastowo również go zyskujesz.\n"
+"  \\item [{\\includesvg[height=0.8\\baselineskip]{\\svgs/pay_v2.svg}}]\n"
+"    \\includesvg[height=0.8\\baselineskip]{\\svgs/gold.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/valuablegreater.svg} \\includesvg[height=0.8\\baselineskip]{\\svgs/arrow_right.svg} —\n"
+"    Gracz musi zapłacić wskazany Zasób aby coś zdobyć.\n"
+"  \\item [{\\LARGE\\textbf{2}}] {\\LARGE\\textbf{x}} —\n"
+"    Wykonaj akcję {\\LARGE\\textbf{x}} dwukrotnie.\n"
+"  \\item [{\\LARGE\\textbf{2}}] \\includesvg[height=0.8\\baselineskip]{\\svgs/treasure.svg}/{\\LARGE\\textbf{2}} \\includesvg[height=0.8\\baselineskip]{\\svgs/resource_die.svg} \\includesvg[height=0.8\\baselineskip]{\\svgs/arrow_right.svg}{\\LARGE\\textbf{1}} —\n"
+"    Rzuć 2 Kośćmi Nagrody lub Kością Zasobów i rozpatrz wynik jednej z nich.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:49
+#: sections/all_map_locations.tex:54
 #, no-wrap
 msgid ""
 "\\phantom{\\includesvg[height=1px]{\\svgs/experience.svg}\\includesvg[height=1px]{\\svgs/spellpower.svg}}\n"
@@ -119,15 +167,17 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:51
+#: sections/all_map_locations.tex:56
 #, no-wrap
 msgid ""
 "The effects of the following \\textbf{Visitable} \\hypertarget{All Map Locations}{fields} are explained by the symbols on the left:\n"
 "\n"
 msgstr ""
+"Efekty następujących \\textbf{Jednorazowych} \\hypertarget{All Map Locations}{Pól} są wyjaśnione przez ikony po lewej:\n"
+"\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:114
+#: sections/all_map_locations.tex:119
 #, no-wrap
 msgid ""
 "{\\centering\n"
@@ -192,9 +242,70 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"{\\centering\n"
+"  \\phantom{j}\\textbf{Artefakt}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/artifact_symbol.jpg}\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Zasób}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/resource_symbol.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Skarb}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/treasure_symbol.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Fontanna Młodości}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/fountain_of_youth.jpg}\\\\\n"
+"\n"
+"  \\filbreak\n"
+"\n"
+"  \\phantom{j}\\textbf{Wiatrak}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/windmill.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Grób Wojownika}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/warriors_tomb.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\textbf{Mistyczny Ogród}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/mystical_garden.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Kamień Wiedzy}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/learning_stone.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Kapliczka Magicznego Symbolu/Inkantacji}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/shrine_of_magic_whatever.jpg}\\\\\n"
+"\n"
+"  \\vspace*{\\fill}\n"
+"  \\filbreak\n"
+"\n"
+"  \\phantom{j}\\textbf{Młyn Wodny}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/water_wheel.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Świątynia}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/temple.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Puszka Pandory}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/pandoras_box.jpg}\\\\\n"
+"}\n"
+"\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:116 sections/all_map_locations.tex:125
+#: sections/all_map_locations.tex:121 sections/all_map_locations.tex:130
 #: sections/credits.tex:35 sections/credits.tex:39 sections/deckbuilding.tex:57
 #: sections/deckbuilding.tex:149 sections/expansion_content.tex:57
 #: sections/game_modes.tex:25 sections/round_structure.tex:28
@@ -207,7 +318,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:118
+#: sections/all_map_locations.tex:123
 #, no-wrap
 msgid ""
 "\\vspace{7.4em}\n"
@@ -215,7 +326,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:123
+#: sections/all_map_locations.tex:128
 #, no-wrap
 msgid ""
 "\\note{10}{\n"
@@ -224,9 +335,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{10}{\n"
+"  Efekty Pól, które pozwalają ci \\textbf{Przeszukać} Talię Zaklęć lub Artefaktów, lub takie, które wymagają wydania Zasobów aby skorzystać z efektu Pola, są \\textbf{ opcjonalne}.\n"
+"  Na takim Polu Jednorazowym musisz zawsze położyć Czarną Kostkę, nawet, jeśli nie skorzystasz z jego efektu.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:127
+#: sections/all_map_locations.tex:132
 #, no-wrap
 msgid ""
 "\\pagebreak\n"
@@ -234,7 +350,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:136
+#: sections/all_map_locations.tex:141
 #, no-wrap
 msgid ""
 "\\subsection*{Towns, Mines and Settlements}\n"
@@ -247,9 +363,17 @@ msgid ""
 "You also do not gain access to their Town board or Faction Units, unlike in the video game.\n"
 "\n"
 msgstr ""
+"\\subsection*{Miasta, Kopalnie i Osady}\n"
+"\\textbf{Miasta} usytuowane są w centralnym Polu Kafelka Początkowego (I).\n"
+"Flagowanie Miasta wroga uniemożliwia odradzanie się tam jego Bohaterów Pomocniczych i przemieszczanie się tam Bohaterów Głównych, jeśli zostaną pokonani.\n"
+"Flagowanie Miasta może \\hyperlink{End}{Wyeliminować Gracza}, a Scenariusze przeważnie przewidują za ich Flagowanie specjalne nagrody.\n"
+"Za Flagowanie Miasta otrzymujesz \\textbf{Kostkę Frakcji} jej właściciela.\n"
+"W przeciwnym wypadku, Flagowanie Miasta nie ma konsekwencji.\n"
+"Nie traci on dostępu do swojej Planszy Miasta ani jej akcji, a w odróżnieniu do gry PC, ty nie uzyskujesz dostępu do niej, ani jego Jednostek Frakcyjnych.\n"
+"\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:141
+#: sections/all_map_locations.tex:146
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -258,9 +382,14 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\framedimage[\\linewidth]{\\images/core_towns.jpg}\n"
+"  \\textit{Miasta z zestawu podstawowego gry.}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:147
+#: sections/all_map_locations.tex:152
 #, no-wrap
 msgid ""
 "\\hypertarget{Mines}{\\textbf{Mines}}\\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.\n"
@@ -268,9 +397,13 @@ msgid ""
 "All mines have the \\includesvg[height=10px]{\\svgs/ongoing.svg} symbol and a picture of the Resource they produce next to it.\n"
 "\n"
 msgstr ""
+"\\hypertarget{Mines}{\\textbf{Kopalnie}}\\index{Mines} to Flagowalne Pola zwiększające produkcję danego Zasobu, gdy są Oflagowane.\n"
+"Oflagowanie Kopalni po raz pierwszy dodatkowo natychmiast zapewnia jej przychód.\n"
+"Każda Kopalnia ma ikonę \\includesvg[height=10px]{\\svgs/ongoing.svg} i obrazek produkowanego Zasobu obok.\n"
+"\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:155
+#: sections/all_map_locations.tex:160
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -282,9 +415,17 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.55\\linewidth]{\\images/mine_example.png}\\\\\n"
+"  \\textit{Kopalnia produkująca \\includesvg[height=10px]{\\svgs/valuablegreater.svg}, strzeżona przez Jednostki Neutralne 3. Poziomu.\n"
+"  Poza zwiększeniem produkcji \\includesvg[height=10px]{\\svgs/valuablegreater.svg}, pierwszy gracz, który Oflaguje to Pole natychmiast zyska \\includesvg[height=10px]{\\svgs/valuablegreater.svg}.\n"
+"  }\n"
+"\\end{center}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:164
+#: sections/all_map_locations.tex:169
 #, no-wrap
 msgid ""
 "\\textbf{Settlements}\\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.\n"
@@ -297,9 +438,18 @@ msgid ""
 "Do not place any Resource Tokens on the Settlement if you choose to Reinforce.\n"
 "\n"
 msgstr ""
+"\\textbf{Osady}\\index{Settlement} służą jako punkt startowy dla Bohaterów Pomocniczych i dla Bohaterów Głównych, gdy zostaną pokonani.\n"
+"Gdy Oflagujesz Osadę, wybierz, czy chcesz zwiększyć produkcję \\includesvg[height=10px]{\\svgs/gold.svg}, \\includesvg[height=10px]{\\svgs/building_materials.svg} czy \\includesvg[height=10px]{\\svgs/valuablegreater.svg}  o jedno pole.\n"
+"Jak w przypadku Kopalni, jeśli jesteś pierwszym by Oflagować Osadę, \\textbf{natychmiast} otrzymujesz Zasób, którego zdecydowałeś się zwiększyć produkcję.\n"
+"Oznacz Osadę Żetonem odpowiedniego Zasobu by pokazać, który Zasób ona produkuje.\n"
+"Gdy Oflagujesz wrogą Osadę, możesz zmienić Zasób, który produkuje.\\par\n"
+"Dodatkowo, \\textbf{zamiast zwiększać Produkcję Zasobu}, możesz natychmiast \\textbf{Wzmocnić} jedną ze swoich \\includesvg[height=10px]{\\svgs/bronze.svg} lub \\includesvg[height=10px]{\\svgs/silver.svg} Jednostek za połowę ceny, zaokrąglając w górę.\n"
+"Jeśli byłeś pierwszym by Oflagować Osadę, Wzmocnij tę Jednostkę \\textbf{za darmo}.\n"
+"Jeśli zdeydujesz się Wzmocnić, nie umieszczaj żadnych Żetonów Zasobów na Osadzie.\n"
+"\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:166 sections/deckbuilding.tex:119
+#: sections/all_map_locations.tex:171 sections/deckbuilding.tex:119
 #: sections/units.tex:62
 #, no-wrap
 msgid ""
@@ -308,7 +458,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:183
+#: sections/all_map_locations.tex:188
 #, no-wrap
 msgid ""
 "\\begin{minipage}[h]{\\linewidth}\n"
@@ -326,152 +476,206 @@ msgid ""
 "  They all work identically.}\n"
 "\\end{minipage}"
 msgstr ""
+"\\begin{minipage}[h]{\\linewidth}\n"
+"  \\centering\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/castle_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/dungeon_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/necropolis_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/rampart_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/fortress_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/inferno_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/tower_settlement.png}\n"
+"  \\par\n"
+"  \\textit{Dostępne Osady.\n"
+"  Każda jest wzorowana na innej Frakcji.\n"
+"  Wszystkie mają identyczną zasadę działania.}\n"
+"\\end{minipage}"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:183 sections/credits.tex:5
+#: sections/all_map_locations.tex:188 sections/credits.tex:5
 #: sections/heroes.tex:70 sections/introduction.tex:5
 msgid "\\bigbreak"
 msgstr ""
 
 #. type: subsection{#2}
-#: sections/all_map_locations.tex:185
+#: sections/all_map_locations.tex:190
 msgid "\\hypertarget{Revisitable Fields}{Revisitable Fields}"
-msgstr ""
+msgstr "\\hypertarget{Revisitable Fields}{Pola Wielorazowe}"
 
 #. type: minipage
-#: sections/all_map_locations.tex:215
+#: sections/all_map_locations.tex:220
 msgid ""
 "\\textbf{Library}\\par \\framedimage[\\textwidth]{\\map_locations/library."
 "jpg}"
 msgstr ""
+"\\textbf{Biblioteka}\\par \\framedimage[\\textwidth]{\\map_locations/library."
+"jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:215
+#: sections/all_map_locations.tex:220
 msgid ""
 "\\small Category: \\textbf{Revisitable}\\\\You may \\includesvg[height=8px]"
 "{\\svgs/pay_v2.svg} 3 \\includesvg[height=8px]{\\svgs/gold.svg} to Remove 1 "
 "Statistic Card from your hand or Discard Pile and replace it with any other "
 "Statistic Card.  You may do this twice per Visit."
 msgstr ""
+"\\small Typ lokacji: \\textbf{Wielorazowa}\\\\Możesz zapłacić \\includesvg[height=8px]"
+"{\\svgs/pay_v2.svg} 3 \\includesvg[height=8px]{\\svgs/gold.svg} aby Usunąć 1 "
+"Kartę Statystyki ze swojej ręki albo ze Stosu Kart Odrzuconych i zamienić ją z jakąkolwiek inną "
+"Kartą Statystyki.  Możesz tak zrobić dwukrotnie."
 
 #. type: minipage
-#: sections/all_map_locations.tex:215
+#: sections/all_map_locations.tex:220
 msgid ""
 "\\captionsetup{singlelinecheck=off} \\phantom{j}\\textbf{Black Market}\\par "
 "\\framedimage[\\textwidth]{\\map_locations/black_market.jpg}"
 msgstr ""
+"\\captionsetup{singlelinecheck=off} \\phantom{j}\\textbf{Czarny Rynek}\\par "
+"\\framedimage[\\textwidth]{\\map_locations/black_market.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:215
+#: sections/all_map_locations.tex:220
 msgid ""
 "\\small Category: \\textbf{Revisitable}\\\\Look at the top 4 cards from the "
 "Artifact Discard Pile.  You may buy one of them for:"
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Wielorazowa}\\\\Podejrzyj 4 wierzchnie Karty ze "
+"Stosu Kart Odrzuconych.  Możesz kupić jedną z nich za:"
 
 #. type: itemize
-#: sections/all_map_locations.tex:215
+#: sections/all_map_locations.tex:220
 msgid "sep{-4pt}"
 msgstr ""
 
 #. type: itemize
-#: sections/all_map_locations.tex:215
+#: sections/all_map_locations.tex:220
 msgid ""
 "[5] \\includesvg[height=8px]{\\svgs/gold.svg} if it is a \\textbf{Minor} "
 "Artifact"
 msgstr ""
+"[5] \\includesvg[height=8px]{\\svgs/gold.svg} jeśli jest to \\textbf{Słaby} "
+"Artefakt"
 
 #. type: itemize
-#: sections/all_map_locations.tex:215
+#: sections/all_map_locations.tex:220
 msgid ""
 "[7] \\includesvg[height=8px]{\\svgs/gold.svg} if it is a \\textbf{Major} "
 "Artifact"
 msgstr ""
+"[7] \\includesvg[height=8px]{\\svgs/gold.svg} jeśli jest to \\textbf{Mocny} "
+"Artefakt"
 
 #. type: itemize
-#: sections/all_map_locations.tex:215
+#: sections/all_map_locations.tex:220
 msgid ""
 "[10] \\includesvg[height=8px]{\\svgs/gold.svg} if it is a \\textbf{Relic} "
 "Artifact"
 msgstr ""
+"[10] \\includesvg[height=8px]{\\svgs/gold.svg} jeśli jest to \\textbf{Relikt} "
 
 #. type: minipage
-#: sections/all_map_locations.tex:239
+#: sections/all_map_locations.tex:244
 msgid ""
 "\\textbf{Sanctuary}\\par \\framedimage[\\textwidth]{\\map_locations/"
 "sanctuary.jpg}"
 msgstr ""
+"\\textbf{Sanktuarium}\\par \\framedimage[\\textwidth]{\\map_locations/"
+"sanctuary.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:239
+#: sections/all_map_locations.tex:244
 msgid ""
 "\\small Category: \\textbf{Revisitable}\\\\ Heroes on this Field cannot be "
 "attacked by other Heroes.  Friendly Heroes can move through enemy Heroes on "
 "this Field but cannot stop here."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Wielorazowa}\\\\ Na tym Polu Bohaterowie nie mogą zostać "
+"zaatakowani przez innych Boharerów.  Sojuszniczy Bohaterowie mogą przechodzić przez wrogich Bohaterów na "
+"tym Polu, ale nie mogą się na nim zatrzymać."
 
 #. type: minipage
-#: sections/all_map_locations.tex:239
+#: sections/all_map_locations.tex:244
 msgid ""
 "\\phantom{j}\\textbf{Tavern}\\par \\framedimage[\\textwidth]{\\map_locations/"
 "tavern.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Karczma}\\par \\framedimage[\\textwidth]{\\map_locations/"
+"tavern.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:239
+#: sections/all_map_locations.tex:244
 msgid ""
 "\\small Category: \\textbf{Revisitable}\\\\ You can \\includesvg[height=8px]"
 "{\\svgs/pay_v2.svg} 7 \\includesvg[height=8px]{\\svgs/gold.svg} to gain a "
 "Secondary Hero.  Place their model on this Field.  Then, choose one enemy "
 "player to discard 1 random card from their hand."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Wielorazowa}\\\\ Możesz \\includesvg[height=8px]"
+"{\\svgs/pay_v2.svg} 7 \\includesvg[height=8px]{\\svgs/gold.svg} aby zdobyć "
+"Bohatera Pomocniczego.  Umieść jego Figurkę na tym Polu.  Następnie, wybierz "
+"jednego przeciwnika aby odrzucić 1 losową Kartę z jego ręki."
 
 #. type: minipage
-#: sections/all_map_locations.tex:258
+#: sections/all_map_locations.tex:263
 msgid ""
 "\\hypertarget{Trading Post}{\\textbf{Trading Post}}\\par "
 "\\framedimage[\\textwidth]{\\map_locations/trading_post.jpg}"
 msgstr ""
+"\\hypertarget{Trading Post}{\\textbf{Punkt Handlowy}}\\par "
+"\\framedimage[\\textwidth]{\\map_locations/trading_post.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:258
+#: sections/all_map_locations.tex:263
 msgid ""
 "\\small Category: \\textbf{Revisitable}\\\\ \\textbf{Choose one}: "
 "\\protect\\hyperlink{Trading}{Trade} resources and Remove cards OR buy a "
 "\\protect\\hyperlink{War Machines}{War Machine}."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Wielorazowa}\\\\ \\textbf{Wybierz jedną opcję}: "
+"\\protect\\hyperlink{Trading}{Wymień} Zasoby i Usuń Karty LUB kup "
+"\\protect\\hyperlink{War Machines}{Machinę Wojenną}."
 
 #. type: minipage
-#: sections/all_map_locations.tex:258
+#: sections/all_map_locations.tex:263
 msgid ""
 "\\phantom{j}\\hypertarget{War Machine Factory}{\\textbf{War Machine "
 "Factory}}\\par \\framedimage[\\textwidth]{\\map_locations/"
 "war_machine_factory.jpg}"
 msgstr ""
+"\\phantom{j}\\hypertarget{War Machine Factory}{\\textbf{Fabryka Machin Wojennych}}\\par \\framedimage[\\textwidth]{\\map_locations/"
+"war_machine_factory.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:258
+#: sections/all_map_locations.tex:263
 msgid ""
 "\\small Category: \\textbf{Revisitable}\\\\Buy a \\protect\\hyperlink{War "
 "Machines}{War Machine}.\\phantom{.......}"
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Wielorazowa}\\\\Możesz tu kupić \\protect\\hyperlink{War "
+"Machines}{Machiny Wojenne}.\\phantom{.......}"
 
 #. type: minipage
-#: sections/all_map_locations.tex:272
+#: sections/all_map_locations.tex:277
 msgid ""
 "\\phantom{j}\\textbf{Stables}\\par \\framedimage[\\textwidth]"
 "{\\map_locations/stables.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Stajnie}\\par \\framedimage[\\textwidth]"
+"{\\map_locations/stables.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:272
+#: sections/all_map_locations.tex:277
 msgid ""
 "\\small Category: \\textbf{Revisitable}\\\\ Gain 1 MP "
 "\\includesvg[height=8px]{\\svgs/movement.svg}.  It lasts for only one Turn.  "
 "See \\protect\\hyperlink{Movement}{Movement Actions}."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Wielorazowa}\\\\ Zyskaj 1 PR "
+"\\includesvg[height=8px]{\\svgs/movement.svg}.  Tyczy się tylko trwającej Tury.  "
+"Zob. \\protect\\hyperlink{Movement}{Akcje Ruchu}."
 
 #. type: tikzpicture
-#: sections/all_map_locations.tex:276
+#: sections/all_map_locations.tex:281
 #, no-wrap
 msgid ""
 "[overlay]\n"
@@ -479,226 +683,294 @@ msgid ""
 msgstr ""
 
 #. type: subsection{#2}
-#: sections/all_map_locations.tex:278
+#: sections/all_map_locations.tex:283
 msgid "\\hypertarget{Other Fields}{Other Fields}"
-msgstr ""
+msgstr "\\hypertarget{Other Fields}{Inne Pola}"
 
 #. type: minipage
-#: sections/all_map_locations.tex:299
+#: sections/all_map_locations.tex:304
 msgid ""
 "\\textbf{Tree of Knowledge}\\par \\framedimage[\\linewidth]{\\map_locations/"
 "tree_of_knowledge.jpg}"
 msgstr ""
+"\\textbf{Drzewo Wiedzy}\\par \\framedimage[\\linewidth]{\\map_locations/"
+"tree_of_knowledge.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:299
+#: sections/all_map_locations.tex:304
 msgid ""
 "\\small Category: \\textbf{Visitable}\\\\You may \\includesvg[height=8px]"
 "{\\svgs/pay_v2.svg} 3 \\includesvg[height=8px]{\\svgs/valuablegreater.svg} "
 "or 10 \\includesvg[height=8px]{\\svgs/gold.svg} to gain 2 "
 "\\includesvg[height=8px]{\\svgs/experience.svg}."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Jednorazowa}\\\\Możesz \\includesvg[height=8px]"
+"{\\svgs/pay_v2.svg} 3 \\includesvg[height=8px]{\\svgs/valuablegreater.svg} "
+"lub 10 \\includesvg[height=8px]{\\svgs/gold.svg} aby zyskać 2 "
+"\\includesvg[height=8px]{\\svgs/experience.svg}."
 
 #. type: minipage
-#: sections/all_map_locations.tex:299
+#: sections/all_map_locations.tex:304
 msgid ""
 "\\textbf{Redwood Observatory}\\par \\framedimage[\\linewidth]"
 "{\\map_locations/redwood_observatory.jpg}"
 msgstr ""
+"\\textbf{Obserwatorium}\\par \\framedimage[\\linewidth]"
+"{\\map_locations/redwood_observatory.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:299
+#: sections/all_map_locations.tex:304
 msgid ""
 "\\small Category: \\textbf{Visitable}\\\\Discover a face down Tile adjacent "
 "to this one."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Jednorazowa}\\\\Odkryj zakryty Kafelek Mapy przylegający "
+"do tego Kafelka."
 
 #. type: minipage
-#: sections/all_map_locations.tex:321
+#: sections/all_map_locations.tex:326
 msgid ""
 "\\phantom{j}\\textbf{Grail}\\par \\framedimage[\\linewidth]{\\map_locations/"
 "grail.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Graal}\\par \\framedimage[\\linewidth]{\\map_locations/"
+"grail.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:321
+#: sections/all_map_locations.tex:326
 msgid ""
 "\\small Category: \\textbf{Visitable}\\\\Gain a Grail Token.  Only one Grail "
 "Token can exist in the game, do not gain another if this Field's Black Cube "
 "is removed or if there are multiple Grail Fields.  The Token's effects are "
 "described in the Scenario's description.  \\phantom{\\ldots\\ldots\\ldots}"
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Jednorazowa}\\\\Otrzymujesz Żeton Graala.  W grze może istnieć "
+"tylko jeden Żeton Graala - nie otrzymujesz kolejnego jeśli Czarna Kostka zostanie "
+"usunięta z tego Pola lub jeśli istnieje wiele Pól z Graalem.  Efekty Żetonu są "
+"wyjaśnione w opisie Scenariusza.  \\phantom{\\ldots\\ldots\\ldots}"
 
 #. type: minipage
-#: sections/all_map_locations.tex:321
+#: sections/all_map_locations.tex:326
 msgid ""
 "\\phantom{j}\\textbf{Market of Time}\\par \\framedimage[\\linewidth]"
 "{\\map_locations/market_of_time.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Jarmark Czasu}\\par \\framedimage[\\linewidth]"
+"{\\map_locations/market_of_time.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:321
+#: sections/all_map_locations.tex:326
 msgid ""
 "\\small Category: \\textbf{Visitable}\\\\ Remove one card from your hand.  "
 "Then \\textbf{Search (2)} the Ability, Spell, or Artifact Deck."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Jednorazowa}\\\\ Usuń 1 Kartę ze swojej ręki.  "
+"Następnie \\textbf{Przeszukaj (2)} Talię Umiejętności, Zaklęć lub Artefaktów."
 
 #. type: minipage
-#: sections/all_map_locations.tex:343
+#: sections/all_map_locations.tex:348
 msgid ""
 "\\phantom{j}\\textbf{Hill Fort}\\par \\framedimage[\\linewidth]"
 "{\\map_locations/hill_fort.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Fort na Wzgórzu}\\par \\framedimage[\\linewidth]"
+"{\\map_locations/hill_fort.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:343
+#: sections/all_map_locations.tex:348
 msgid ""
 "\\small Category: \\textbf{Visitable}\\\\ You may immediately Reinforce one "
 "of your \\includesvg[height=8px]{\\svgs/bronze.svg} or "
 "\\includesvg[height=8px]{\\svgs/silver.svg} Units.  The Reinforcement cost "
 "is reduced by 3 \\includesvg[height=8px]{\\svgs/gold.svg} to a minimum of 0."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Jednorazowa}\\\\ Możesz natychmiast Wzmocnić jedną "
+"ze swoich \\includesvg[height=8px]{\\svgs/bronze.svg} lub "
+"\\includesvg[height=8px]{\\svgs/silver.svg} Jednostek.  Koszt Wzmocnienia "
+"jest obniżony o 3 \\includesvg[height=8px]{\\svgs/gold.svg} do minimum 0."
 
 #. type: minipage
-#: sections/all_map_locations.tex:343
+#: sections/all_map_locations.tex:348
 msgid ""
 "\\phantom{j}\\textbf{Prison}\\par \\framedimage[\\linewidth]{\\map_locations/"
 "prison.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Więzienie}\\par \\framedimage[\\linewidth]{\\map_locations/"
+"prison.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:343
+#: sections/all_map_locations.tex:348
 msgid ""
 "\\small Category: \\textbf{Visitable}\\\\ Gain a Secondary Hero.  Place "
 "their model on this Field.  If you already have a Secondary Hero, gain 3 "
 "\\includesvg[height=8px]{\\svgs/gold.svg} instead."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Jednorazowa}\\\\ Zyskaj Bohatera Pomocniczego i umieść "
+"jego Figurkę na tym Polu.  Jeśli już masz Bohatera Pomocniczego, otrzymujesz w zamian 3 "
+"\\includesvg[height=8px]{\\svgs/gold.svg}."
 
 #. type: minipage
-#: sections/all_map_locations.tex:363
+#: sections/all_map_locations.tex:368
 msgid ""
 "\\textbf{Magic Spring}\\par \\framedimage[\\linewidth]{\\map_locations/"
 "magic_spring.jpg}"
 msgstr ""
+"\\textbf{Magiczne Źródło}\\par \\framedimage[\\linewidth]{\\map_locations/"
+"magic_spring.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:363
+#: sections/all_map_locations.tex:368
 msgid ""
 "\\small Category: \\textbf{Visitable}\\\\ You may look at the top 3 Cards of "
 "your Discard Pile and return one of them to your Hand.  Return the remaining "
 "cards to the top of your Discard Pile in any order."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Jednorazowa}\\\\ Możesz podejrzeć 3 wierzchnie Karty "
+"ze swojego Stosu Kart Odrzuconych i wziąć 1 z nich na Rękę.  Pozostałe Karty odłóż "
+" na wierzch swojego Stosu Kart Odrzuconych w dowolnej kolejności."
 
 #. type: minipage
-#: sections/all_map_locations.tex:363
+#: sections/all_map_locations.tex:368
 msgid ""
 "\\phantom{j}\\textbf{Witch Hut}\\par \\framedimage[\\linewidth]"
 "{\\map_locations/witch_hut.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Chatka Czarownicy}\\par \\framedimage[\\linewidth]"
+"{\\map_locations/witch_hut.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:363
+#: sections/all_map_locations.tex:368
 msgid ""
 "\\small Category: \\textbf{Visitable}\\\\ \\textbf{Choose one}: Remove an "
 "Ability card from your hand OR look at the top card of the Ability Deck and "
 "put that card into your hand or into the Ability Deck Discard Pile."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Jednorazowa}\\\\ \\textbf{Wybierz jedno}: Usuń "
+"Kartę Umiejętności ze swojej ręki LUB spójrz na wierzchnią Kartę z Talii Umiejętności i "
+"weź tę Kartę do swojej ręki albo odłóż na Stos Kart Odrzuconych Talii Umiejętności."
 
 #. type: minipage
-#: sections/all_map_locations.tex:392
+#: sections/all_map_locations.tex:397
 msgid ""
 "\\phantom{j}\\textbf{Obelisk}\\par \\framedimage[\\linewidth]"
 "{\\map_locations/obelisk.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Obelisk}\\par \\framedimage[\\linewidth]"
+"{\\map_locations/obelisk.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:392
+#: sections/all_map_locations.tex:397
 msgid ""
 "\\small Category: \\textbf{Flaggable}\\\\ The Obelisk's effects depend on "
 "the Scenario.  When you Flag this Field, do not remove any enemy Faction "
 "Cubes; multiple players may have a Faction Cube on this Field."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Flagowalna}\\\\ Obeliski mają różne działanie w "
+"zależności od Scenariusza.  Gdy Oflagowywujesz to Pole, nie usuwaj żadnej z wrogich Kostek "
+"Frakcyjnych - na tym Polu mogą znajdować się Frakcyjne Kostki wielu graczy."
 
 #. type: minipage
-#: sections/all_map_locations.tex:392
+#: sections/all_map_locations.tex:397
 msgid ""
 "\\captionsetup{singlelinecheck=off} \\centering "
 "\\phantom{j}\\textbf{Scholar}\\par \\framedimage[\\linewidth]"
 "{\\map_locations/scholar.jpg}"
 msgstr ""
+"\\captionsetup{singlelinecheck=off} \\centering "
+"\\phantom{j}\\textbf{Uczony}\\par \\framedimage[\\linewidth]"
+"{\\map_locations/scholar.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:392
+#: sections/all_map_locations.tex:397
 msgid ""
 "\\small Category: \\textbf{Visitable}\\\\ Roll 1 Attack Die.  Depending on "
 "the result, do the following:"
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Jednorazowa}\\\\ Rzuć 1 Kością Ataku.  W zależności od "
+"wyniku zrób co poniższe:"
 
 #. type: itemize
-#: sections/all_map_locations.tex:392
+#: sections/all_map_locations.tex:397
 msgid "sep{-0.2em}"
 msgstr ""
 
 #. type: itemize
-#: sections/all_map_locations.tex:392
+#: sections/all_map_locations.tex:397
 msgid ""
 "[ \\textbf{+1}] - Gain a Statistic Card of your choice or Remove a Statistic "
 "Card from your hand."
 msgstr ""
+"[ \\textbf{+1}] - Dobierz wybraną Kartę Statystyki lub Usuń Kartę Statystyki "
+"ze swojej ręki."
 
 #. type: itemize
-#: sections/all_map_locations.tex:392
+#: sections/all_map_locations.tex:397
 msgid ""
 "[\\textbf{0}] - Draw 2 Cards from the Ability Deck, gain one of them and "
 "discard the other."
 msgstr ""
+"[\\textbf{0}] - Dobierz 2 Karty z Talii Umiejętności, weź jedną z nich do ręki i "
+"odrzuć pozostałą."
 
 #. type: itemize
-#: sections/all_map_locations.tex:392
+#: sections/all_map_locations.tex:397
 msgid ""
 "[\\textbf{-1}] - Draw 2 Cards from the Spell Deck, gain one of them and "
 "discard the other."
 msgstr ""
+"[\\textbf{-1}] - Dobierz 2 Karty z Talii Zaklęć, weź jedną z nich do ręki i "
+"odrzuć pozostałą."
 
 #. type: minipage
-#: sections/all_map_locations.tex:410
+#: sections/all_map_locations.tex:415
 msgid ""
 "\\textbf{Dragon Utopia}\\par \\framedimage[\\linewidth]{\\map_locations/"
 "dragon_utopia.jpg}"
 msgstr ""
+"\\textbf{Smocza Utopia}\\par \\framedimage[\\linewidth]{\\map_locations/"
+"dragon_utopia.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:410
+#: sections/all_map_locations.tex:415
 msgid ""
 "\\small Category: \\textbf{Flaggable}\\\\Effects depend on the Scenario."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Flagowalna}\\\\Efekt różni się w zależności od Scenariusza."
 
 #. type: minipage
-#: sections/all_map_locations.tex:410
+#: sections/all_map_locations.tex:415
 msgid ""
 "\\textbf{University}\\par \\framedimage[\\linewidth]{\\map_locations/"
 "university.jpg}"
 msgstr ""
+"\\textbf{Uniwersytet}\\par \\framedimage[\\linewidth]{\\map_locations/"
+"university.jpg}"
 
 #. type: caption{#2}
-#: sections/all_map_locations.tex:410
+#: sections/all_map_locations.tex:415
 msgid ""
 "\\small Category: \\textbf{Visitable}\\\\ \\includesvg[height=8px]{\\svgs/"
 "pay_v2.svg} 6 \\includesvg[height=8px]{\\svgs/gold.svg} to \\textbf{Search "
 "(4)} the Ability Discard Pile."
 msgstr ""
+"\\small Typ Lokacji: \\textbf{Jednorazowa}\\\\ \\includesvg[height=8px]{\\svgs/"
+"pay_v2.svg} 6 \\includesvg[height=8px]{\\svgs/gold.svg} aby \\textbf{Przeszukać "
+"(4)} Stos Kart Odrzuconych Talii Umiejętności."
 
 #. type: multicols*
-#: sections/all_map_locations.tex:415
+#: sections/all_map_locations.tex:420
 #, no-wrap
 msgid ""
 "{\\centering\\phantom{Star Axis}\\par}\n"
 "\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
 "\n"
 msgstr ""
+"{\\centering\\phantom{Oś Gwiazdy}\\par}\n"
+"\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
+"\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:417 sections/credits.tex:33
+#: sections/all_map_locations.tex:422 sections/credits.tex:33
 #: sections/deckbuilding.tex:59 sections/expansion_content.tex:18
 #: sections/expansion_content.tex:63 sections/game_modes.tex:27
 #: sections/scenario_end.tex:20 sections/units.tex:79
@@ -709,7 +981,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:424
+#: sections/all_map_locations.tex:429
 #, no-wrap
 msgid ""
 "{\\centering\\textbf{Star Axis}\\par}\n"
@@ -720,9 +992,16 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"{\\centering\\textbf{Oś Gwiazdy}\\par}\n"
+"\\framedimage[\\linewidth]{\\map_locations/star_axis.jpg}\n"
+"{\\small Typ Lokacji: \\textbf{Flagowalna}\\\\\n"
+"  Możesz Usunąć z ręki jedną ze swoich Kart Statystyk i zamienić ją na Kartę \\textbf{Ulepszoną} tego samego typu.\n"
+"  Gdy Oflagujesz to Pole, nie usuwaj żadnych z wrogich Kostek Frakcyjnych - na tym Polu mogą znajdować się Frakcyjne Kostki wielu graczy.\n"
+"}\n"
+"\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:426 sections/combat.tex:89
+#: sections/all_map_locations.tex:431 sections/combat.tex:91
 #: sections/player_turns.tex:37 sections/units.tex:105 sections/units.tex:138
 #, no-wrap
 msgid ""
@@ -731,7 +1010,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:437
+#: sections/all_map_locations.tex:442
 #, no-wrap
 msgid ""
 "{\\centering\\textbf{\\hypertarget{Random Town}{Random Town}}\\par}\n"
@@ -746,3 +1025,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"{\\centering\\textbf{\\hypertarget{Random Town}{Losowe Miasto}}\\par}\n"
+"\\framedimage[\\linewidth]{\\map_locations/random_town.jpg}\n"
+"{\\small Typ Lokacji: \\textbf{Flagowalna}\\\\\n"
+"  Gdy zostaje odkryte, każdy z graczy rzuca 2 \\includesvg[height=10px]{\\svgs/resource_die.svg}.\n"
+"  Największy z rzutów wybiera Frakcję, która jeszcze nie jest w grze.\n"
+"  Losowe Miasto jest bronione przez Jednostki tej wybranej Frakcji.\n"
+"  Mają \"Grupę\" \\includesvg[height=10px]{\\svgs/bronze.svg}, dwie \"Grupy\" \\includesvg[height=10px]{\\svgs/silver.svg}, oraz dwie \"Garstki\" \\includesvg[height=10px]{\\svgs/golden.svg} Jednostek.\n"
+"  Jednostka \\includesvg[height=10px]{\\svgs/bronze.svg} wybierana jest przez gracza kontrolującego Jednostki podczas tej Walki.\n"
+"  Flagowanie tego Miasta zwiększa produkcję \\includesvg[height=10px]{\\svgs/gold.svg} o 10, które również jest zdobywane natychmiast jeśli jesteś pierwszym który je Oflagował.\n"
+"}\n"
+"\n"
